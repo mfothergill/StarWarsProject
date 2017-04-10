@@ -1,0 +1,64 @@
+﻿@model WebApplication6.Models.Ships
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Ships</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainWeapons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainWeapons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryWeapons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryWeapons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquippedWithShield)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquippedWithShield)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipReview)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipReview)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

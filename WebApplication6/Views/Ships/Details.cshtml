@@ -1,0 +1,58 @@
+﻿@model WebApplication6.Models.Ships
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ships</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainWeapons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainWeapons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryWeapons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryWeapons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquippedWithShield)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquippedWithShield)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipReview)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipReview)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ShipName }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

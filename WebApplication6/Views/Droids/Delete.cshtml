@@ -1,0 +1,64 @@
+﻿@model WebApplication6.Models.Droids
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Droids</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DroidClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DroidClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accuracy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accuracy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovementRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovementRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequiresLevel5ProgrammingAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequiresLevel5ProgrammingAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewofDroid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewofDroid)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication6.Models.LightSabers>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SaberType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaberColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaberLength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LightSaberReview)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaberType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaberColor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaberLength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LightSaberReview)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AvailableForDarksideOnly }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AvailableForDarksideOnly }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AvailableForDarksideOnly })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApplication6.Models.Droids>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DroidClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Accuracy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovementRating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequiresLevel5ProgrammingAbility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewofDroid)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DroidClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Accuracy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovementRating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequiresLevel5ProgrammingAbility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewofDroid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DroidName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DroidName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DroidName })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,58 @@
+﻿@model WebApplication6.Models.Droids
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Droids</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DroidClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DroidClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accuracy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accuracy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovementRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovementRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequiresLevel5ProgrammingAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequiresLevel5ProgrammingAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewofDroid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewofDroid)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DroidName }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
